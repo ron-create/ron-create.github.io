@@ -1,0 +1,194 @@
+/* Full Page Layout */
+.full-page {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Heart-shaped Falling Images (Larger) */
+.heart-image {
+    width: 80px;  /* Increased size */
+    height: 80px;
+    object-fit: cover;
+    clip-path: polygon(
+      50% 15%,
+      61% 6%,
+      75% 0%,
+      89% 3%,
+      100% 13%,
+      100% 29%,
+      94% 41%,
+      75% 59%,
+      50% 85%,
+      25% 59%,
+      6% 41%,
+      0% 29%,
+      0% 13%,
+      11% 3%,
+      25% 0%,
+      39% 6%
+    );
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Disable image clicking if heartbroken */
+.heart-image.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Centered Valentine Container */
+.valentine-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Centered Valentine Question */
+.valentine-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
+    animation: glow 1.5s infinite alternate;
+    text-align: center;
+}
+
+/* Glow Effect */
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        text-shadow: 4px 4px 20px rgba(255, 50, 50, 1);
+    }
+}
+
+/* Buttons side by side */
+.button-container {
+    display: flex;
+    flex-direction: row; /* Changed to row */
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.modal-button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+}
+
+.yes {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+.no {
+    background-color: #4d4d4d;
+    color: white;
+}
+
+/* Button Hover Effect */
+.modal-button:hover {
+    transform: scale(1.1);
+}
+
+/* Modal Styling */
+.modal {
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Modal Box */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Heartbroken Message */
+.heartbroken-message {
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+}
+
+/* Modal Image */
+.modal img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* Modal Close Button */
+.modal-close {
+    margin-top: 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background-color: darkred;
+}
+
+.heart-button {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .heart-modal-content {
+    background-color: #ffccdc;
+    border-radius: 20%;
+    padding: 20px;
+    width: 250px;
+    height: 250x;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .heart-modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
